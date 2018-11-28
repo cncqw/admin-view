@@ -8,8 +8,8 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="stylesheet" href="../../../layuiadmin/layui/css/layui.css" media="all">
-  <link rel="stylesheet" href="../../../layuiadmin/style/admin.css" media="all">
+  <link rel="stylesheet" href="../../../admin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../../admin/style/admin.css" media="all">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
       <a><cite>设置单元格样式</cite></a>
     </div>
   </div>
-  
+
   <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
       <div class="layui-col-md12">
@@ -29,7 +29,7 @@
           <div class="layui-card-header">设置单元格样式</div>
           <div class="layui-card-body">
             <table class="layui-hide" id="test-table-style"></table>
-            
+
             <script type="text/html" id="test-table-usernameTpl">
               <a href="/?table-demo-id={{d.id}}" class="layui-table-link" target="_blank">{{ d.username }}</a>
             </script>
@@ -45,16 +45,16 @@
       </div>
     </div>
   </div>
-  
-  <script src="../../../layuiadmin/layui/layui.js"></script>  
+
+  <script src="../../../admin/layui/layui.js"></script>
   <script>
   layui.config({
-    base: '../../../layuiadmin/' //静态资源所在路径
+    base: '../../../admin/' //静态资源所在路径
   }).extend({
     index: 'lib/index' //主入口模块
   }).use(['index', 'table'], function(){
     var table = layui.table;
-  
+
     table.render({
       elem: '#test-table-style'
       ,url: layui.setter.base + 'json/table/user.js'
@@ -74,7 +74,7 @@
       ,skin: 'row'
       ,even: true
     });
-  
+
   });
   </script>
 </body>
